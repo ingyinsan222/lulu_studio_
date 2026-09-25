@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout — LuLuStudio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="checkout">
+<header class="site-header"><div class="container nav">
+  <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true">LL</span>LuLuStudio</a>
+  <nav class="desktop-nav"><a href="index.html">Home</a><a href="shop.html">All packs</a><a href="index.html#about">About</a></nav>
+  <div class="nav-actions"><a class="cart-link" href="cart.html">Cart <span id="cartCount">0</span></a><button class="menu-btn">☰</button></div>
+</div></header>
+
+<main class="container">
+  <section class="page-head"><h1>Checkout</h1></section>
+  <section class="checkout-layout">
+    <form class="form-card" id="checkoutForm">
+      <label>Email</label><input type="email" required placeholder="you@example.com">
+      <label>Card number</label><input required placeholder="4242 4242 4242 4242">
+      <div style="display:flex;gap:12px">
+        <div style="flex:1"><label>Expiry</label><input required placeholder="MM/YY"></div>
+        <div style="flex:1"><label>CVC</label><input required placeholder="123"></div>
+      </div>
+      <button class="btn btn-primary full" id="payButton" style="margin-top:20px">Pay</button>
+      <p style="color:var(--muted);font-size:12px;margin-top:10px">This is a demo checkout — no real payment is processed.</p>
+    </form>
+    <div class="summary-card">
+      <div id="checkoutItems"></div>
+      <div class="total-row"><span>Total</span><strong id="checkoutTotal"></strong></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer container"><div class="footer-inner"><p>One studio, one pack at a time.</p></div></footer>
+<script src="js/data.js"></script><script src="js/app.js"></script>
+</body>
+</html>
